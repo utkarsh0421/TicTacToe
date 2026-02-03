@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: tictactoe
+    env: docker
+    plan: free
+    dockerContext: .
+    healthCheckPath: /
+    envVars:
+      - key: PORT
+        value: 8080
