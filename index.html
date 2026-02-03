@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Tic Tac Toe</h1>
+
+        <!-- Home Screen -->
+        <div id="home-screen">
+            <p style="margin-bottom: 2rem; color: #6B7280;">Choose your game mode</p>
+            
+            <div class="symbol-selection" style="margin-bottom: 2rem;">
+                <p style="margin-bottom: 0.5rem; font-size: 0.9rem;">Choose your side:</p>
+                <div class="toggle-container">
+                    <button class="toggle-btn active" data-symbol="X">X</button>
+                    <button class="toggle-btn" data-symbol="O">O</button>
+                </div>
+            </div>
+
+            <div class="mode-selection">
+                <button id="btn-2player" class="btn btn-primary">2 Player</button>
+                <button id="btn-ai" class="btn btn-secondary">Vs Computer</button>
+            </div>
+        </div>
+
+        <!-- Game Screen -->
+        <div id="game-screen" class="hidden">
+            <div class="status-bar" id="status-text">Player X's Turn</div>
+            
+            <div class="game-board" id="board">
+                <div class="cell" data-index="0"></div>
+                <div class="cell" data-index="1"></div>
+                <div class="cell" data-index="2"></div>
+                <div class="cell" data-index="3"></div>
+                <div class="cell" data-index="4"></div>
+                <div class="cell" data-index="5"></div>
+                <div class="cell" data-index="6"></div>
+                <div class="cell" data-index="7"></div>
+                <div class="cell" data-index="8"></div>
+            </div>
+
+            <div class="controls">
+                <button id="btn-restart" class="btn btn-secondary" style="font-size: 0.9rem; padding: 0.5rem 1rem;">Restart</button>
+                <button id="btn-home" class="btn" style="font-size: 0.9rem; padding: 0.5rem 1rem;">Home</button>
+            </div>
+        </div>
+
+        <!-- Result Screen Overlay -->
+        <div id="result-screen" class="hidden">
+            <div class="result-card">
+                <h2 id="result-message" style="font-size: 2rem; margin-bottom: 1.5rem; color: var(--primary-color);">Winner!</h2>
+                <button id="btn-play-again" class="btn btn-primary">Play Again</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/game.js"></script>
+</body>
+</html>
